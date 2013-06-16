@@ -10,7 +10,7 @@ set :rvm_type, :system
 set :rvm_install_with_sudo, true
 
 # Deploy settings
-set :deploy_to, "/data/#{application}"
+set :deploy_to, "/data_web/#{application}"
 set :deploy_via, :remote_cache
 set :branch, "master"
 
