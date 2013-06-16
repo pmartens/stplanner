@@ -2,10 +2,10 @@
 set :rails_env, "staging"
 
 # Servers settings
-server "webruby.cg.lan", :app, :web, :db, :primary => true
+server "192.168.0.20", :app, :web, :db, :primary => true
 
 # RVM configuration settings
-set :rvm_ruby_string, "RUBYVERSION@#{application}"
+set :rvm_ruby_string, "ruby-1.9.3-p385@#{application}"
 set :rvm_type, :system
 set :rvm_install_with_sudo, true
 
@@ -26,16 +26,16 @@ set :normalize_asset_timestamps, false
 set :database_config, {
     :adapter => "mysql2",
     :username => "root",
-    :host => "10.0.0.216",
+    :host => "localhost",
     :development => "dev_#{application}",
     :test => "test_#{application}",
     :staging => "acc_#{application}",
     :production => "#{application}"
 }
 
-set :user, "deployer"
-set :runner, "deployer"
-set :group, "deployer"
+set :user, "deploy"
+set :runner, "deploy"
+set :group, "deploy"
 set :use_sudo, false
 
 #Overrule passenger settings

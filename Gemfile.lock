@@ -1,6 +1,6 @@
 GIT
-  remote: git@github.com:cgservices/rdeploy.git
-  revision: b5728d1b3ea614038e8dc08c45514781526ec1b8
+  remote: git@github.com:pmartens/rdeploy.git
+  revision: dfd1c7b4e4bd054f2c557c70c81bbfff997eb997
   specs:
     rdeploy (0.2.0)
       capistrano (~> 2.12.0)

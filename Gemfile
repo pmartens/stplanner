@@ -35,5 +35,5 @@ group :developement, :test do
   gem 'selenium-webdriver'
   gem 'database_cleaner'
   gem 'factory_girl_rails'
-  gem 'rdeploy', '>= 0.2.0', :git=> "git@github.com:cgservices/rdeploy.git"
+  gem 'rdeploy', '>= 0.2.0', :git=> "git@github.com:pmartens/rdeploy.git"
 end

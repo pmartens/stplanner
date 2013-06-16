@@ -6,10 +6,10 @@
 
 set :stages, %w(staging production)
 set :default_stage, "staging"
-set :application, "APPLICATION NAME"
+set :application, "stplanner"
 set :scm, "git"
 set :scm_verbose, true
-set :repository, "git@github.com:/cgservices/#{application}.git"
+set :repository, "git@github.com:/pmartens/#{application}.git"
 set :git_enable_submodules, 1
 
 # ======================================

@@ -2,8 +2,8 @@
 set :rails_env, "production"
 
 # Servers settings
-server "webruby01.cg.nl", :app, :web, :db, :primary => true
-server "webruby02.cg.nl", :app, :web
+server "", :app, :web, :db, :primary => true
+server "", :app, :web
 
 # RVM configuration
 set :rvm_ruby_string, "RUBYVERSION@#{application}"
@@ -30,7 +30,7 @@ set :normalize_asset_timestamps, false
 set :database_config, {
   :adapter => "mysql2",
   :username => "root",
-  :host => "db_writer.int.cg.nl",
+  :host => "",
   :development => "dev_#{application}",
   :test => "test_#{application}",
   :staging => "acc_#{application}",
