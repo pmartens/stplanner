@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @soccerfield.name %>
+</p>
+
+<p>
+  <b>Fieldcode:</b>
+  <%= @soccerfield.fieldcode %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @soccerfield.description %>
+</p>
+
+<p>
+  <b>Present:</b>
+  <%= @soccerfield.present %>
+</p>
+
+
+<%= link_to 'Edit', edit_soccerfield_path(@soccerfield) %> |
+<%= link_to 'Back', soccerfields_path %>

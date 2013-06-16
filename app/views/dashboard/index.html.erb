@@ -1,0 +1,16 @@
+<table>
+    <tr>
+        <td><%= "Total Teams: #{@teams.count}" %> </td>
+    </tr>
+    <tr>
+        <td><%= "Teams present: #{@teams_present.count}" %> </td>
+    </tr>
+    <tr>
+        <td><%= "Teams not present: #{@teams_not_present.count}" %> </td>
+    </tr>
+    <% @teams_not_present.each do |team| %>
+        <tr>
+            <td><%= "#{team.name} #{team.team_group.namecode}#{team.teamnumber}" %></td>
+        </tr>
+    <% end %>
+</table>

@@ -1,0 +1,24 @@
+<%= form_for(@poule) do |f| %>
+  <% if @poule.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@poule.errors.count, "error") %> prohibited this poule from being saved:</h2>
+
+      <ul>
+      <% @poule.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :team_group_id %><br />
+    <%= f.select :team_group_id, options_from_collection_for_select(@teamgroups, :id, :name, @poule.team_group_id) %>
+  </div>
+  <div class="field">
+    <%= f.label :poule_name_id %><br />
+    <%= f.select :poule_name_id, options_from_collection_for_select(@poulenames, :id, :name, @poule.poule_name_id) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

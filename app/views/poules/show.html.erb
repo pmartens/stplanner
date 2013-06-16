@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>TeamGroup:</b>
+  <%= @poule.team_group.name %>
+</p>
+<p>
+  <b>PouleName:</b>
+  <%= @poule.poule_name.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_poule_path(@poule) %> |
+<%= link_to 'Back', poules_path %>

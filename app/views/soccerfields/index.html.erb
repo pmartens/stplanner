@@ -1,0 +1,29 @@
+<h2>Listing soccerfields</h2>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Fieldcode</th>
+    <th>Description</th>
+    <th>Present</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @soccerfields.each do |soccerfield| %>
+  <tr>
+    <td><%= soccerfield.name %></td>
+    <td><%= soccerfield.fieldcode %></td>
+    <td><%= soccerfield.description %></td>
+    <td><%= soccerfield.present %></td>
+    <td><%= link_to 'Show', soccerfield %></td>
+    <td><%= link_to 'Edit', edit_soccerfield_path(soccerfield) %></td>
+    <td><%= link_to 'Destroy', soccerfield, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Soccerfield', new_soccerfield_path %>

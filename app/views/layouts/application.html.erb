@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stplanner</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <script type="text/javascript">
+      jQuery(document).ready(function() {
+          $('#mycarousel').jcarousel();
+      });
+
+      jQuery(document).ready(function() {
+          $('.banner-bar ul').cycle({
+              fx:     'fade',
+              speed:	2000,
+              timeout: 2000
+          });
+      });
+  </script>
+
+</head>
+<body>
+    <div id="template">
+        <div id="layout">
+            <%= render 'shared/header' %>
+            <%= render 'shared/content' %>
+            <%= render 'shared/footer' %>
+        </div>
+    </div>
+</body>
+</html>

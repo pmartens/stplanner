@@ -1,0 +1,26 @@
+<h1>Listing poules</h1>
+
+<table>
+  <tr>
+    <th>TeamGroup</th>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @poules.each do |poule| %>
+  <tr>
+    <td><%= unless @name == poule.team_group.name then poule.team_group.name end %></td>
+    <td><%= poule.poule_name.name %></td>
+    <td><%= link_to 'Show', poule %></td>
+    <td><%= link_to 'Edit', edit_poule_path(poule) %></td>
+    <td><%= link_to 'Destroy', poule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% @name = poule.team_group.name %>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Poule', new_poule_path %>

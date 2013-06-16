@@ -1,0 +1,32 @@
+<h2>Listing teams</h2>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>TeamGroup</th>
+    <th>TeamNumber</th>
+    <th>ContactName</th>
+    <th>PhoneNumber</th>
+    <th>EMail</th>
+    <th>Present</th>
+  </tr>
+
+<% @teams.each do |team| %>
+  <tr>
+    <td><%= team.name %></td>
+    <td><%= team.team_group.namecode %></td>
+    <td><%= team.teamnumber %></td>
+    <td><%= team.contactname %></td>
+    <td><%= team.phonenumber %></td>
+    <td><%= link_to team.email, 'mailto:' + team.email unless team.email.nil? %></td>
+    <td><%= team.present %></td>
+    <td><%= link_to 'Show', team %></td>
+    <td><%= link_to 'Edit', edit_team_path(team) %></td>
+    <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Team', new_team_path %>
